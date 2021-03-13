@@ -21,6 +21,6 @@ const reduce = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 export default reduce;

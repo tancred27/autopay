@@ -5,10 +5,10 @@ import authReducer from './authReducer';
 import { LOGIN_USER, LOGOUT } from  '../types';
 
 const AuthState = (props) => {
-    let email = localStorage.getItem('token');
+    let hashes = localStorage.getItem('token');
     const initialState = {
-        token: email,
-        isAuthenticated: email === null ? false : true
+        token: hashes,
+        isAuthenticated: hashes === null ? false : true
     };
 
     const [state, dispatch] = useReducer(authReducer, initialState);
